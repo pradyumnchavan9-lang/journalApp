@@ -21,6 +21,7 @@ target/
 *.properties
 *.yml
 *.log
+*.xml
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
