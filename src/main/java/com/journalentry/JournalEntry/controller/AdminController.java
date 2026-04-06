@@ -22,6 +22,9 @@ public class AdminController {
     @Autowired
     private AppCache appCache;
 
+    @Autowired
+    private AppCache appCace;
+
     @GetMapping("/all-users")
     public ResponseEntity<List<User>> getAll(){
         List<User> all = userService.getAll();
