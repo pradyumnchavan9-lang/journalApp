@@ -44,14 +44,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getJournalEntryById(ObjectId id){
-        return userRepository.findById(id).orElse(null);
-    }
 
-    public void deleteById(ObjectId id){
-        userRepository.deleteById(id);
-
-    }
 
     public User saveUser(User user){
         return userRepository.save(user );
