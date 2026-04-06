@@ -56,7 +56,7 @@ public class JournalEntryService {
             }
         }catch (Exception e){
             log.error("Error ",e);
-            throw new RuntimeException(e.getMessage());
+            throw new NullPointerException(e.getMessage());
         }
         return removed;
     }
