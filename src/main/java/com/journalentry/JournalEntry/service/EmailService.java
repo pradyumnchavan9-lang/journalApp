@@ -1,5 +1,6 @@
 package com.journalentry.JournalEntry.service;
 
+import com.journalentry.JournalEntry.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -12,6 +13,9 @@ public class EmailService {
 
     @Autowired
     private JavaMailSender javaMailSender;
+
+    @Autowired
+    private UserRepository userRepository;
 
     public void sendEmail(String to,String subject,String body){
         try{
