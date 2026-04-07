@@ -72,7 +72,7 @@ public class JournalEntryService {
             userService.saveUser(user);
         }catch(Exception e){
             System.err.println(e.getMessage());
-            throw new RuntimeException(e.getMessage());
+            throw new NullPointerException(e.getMessage());
         }
 
     }
