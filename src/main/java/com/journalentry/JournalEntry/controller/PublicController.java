@@ -17,12 +17,6 @@ public class PublicController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private UserRepository userRepository;
-
-    public PublicController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     @PostMapping("/create-user")
     public void createUser(@RequestBody User user){

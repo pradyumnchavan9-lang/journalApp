@@ -3,6 +3,7 @@ package com.journalentry.JournalEntry.controller;
 
 import com.journalentry.JournalEntry.cache.AppCache;
 import com.journalentry.JournalEntry.entity.User;
+import com.journalentry.JournalEntry.repository.UserRepository;
 import com.journalentry.JournalEntry.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,10 @@ public class AdminController {
 
     @Autowired
     private AppCache appCace;
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     @GetMapping("/all-users")
     public ResponseEntity<List<User>> getAll(){
